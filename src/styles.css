@@ -22,15 +22,23 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.search-form {
+  display: flex;
+  gap: 5px;
+  flex: 1;
 }
 
 .search-form-input {
   background-color: #f9f7fe;
   border: none;
   border-radius: 6px;
-  width: 80%;
   font-size: 16px;
   padding: 15px 20px;
+  flex: 1;
 }
 
 .search-form-button {
@@ -38,17 +46,17 @@ header {
   padding: 15px 30px;
   border: none;
   font-size: 16px;
-  margin-left: 5px;
   border-radius: 6px;
   color: white;
+  cursor: pointer;
 }
 
 button {
-  background: #885df1;
-  padding: 10px 20px;
+  background: #d7cfec;
+  padding: 15px 20px;
   border: none;
   border-radius: 6px;
-  color: white;
+  color: #885df1;
   cursor: pointer;
 }
 
@@ -135,6 +143,7 @@ footer {
   color: rgba(0, 0, 0, 0.6);
 }
 
+/* Responsive Styles */
 @media (max-width: 768px) {
   .weather-app {
     padding: 20px;
@@ -166,9 +175,18 @@ footer {
   .forecast-container {
     flex-direction: column;
   }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-form {
+    width: 100%;
+  }
 }
 
-/* Dark mode styles */
+/* Dark Mode */
 body.dark-mode {
   background-color: #2b2b2b;
   color: white;
